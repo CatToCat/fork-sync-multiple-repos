@@ -1,6 +1,7 @@
 name: SINGLE_REPO_SYNC
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
