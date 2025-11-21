@@ -1,4 +1,4 @@
-name: SYNC_REPO_EVERYDAY
+name: MULTIPLE_REPO_SYNC
 
 on:
   push:
