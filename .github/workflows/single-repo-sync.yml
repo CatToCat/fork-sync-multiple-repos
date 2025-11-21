@@ -1,12 +1,12 @@
 name: SINGLE_REPO_SYNC
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: 0 */12 * * *
+#  workflow_dispatch:
+#  push:
+#    branches:
+#      - master
+#  schedule:
+#    - cron: 0 */12 * * *
 
 jobs:
   update_external_airflow_fork:
