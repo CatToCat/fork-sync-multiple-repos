@@ -14,10 +14,11 @@ jobs:
     strategy:
       matrix:
         repo:
-          - { upstream: "OrekiYuta/orekiyuta.github.io", target: "CatToCat/orekiyuta.github.io" }
-          - { upstream: "OrekiYuta/Mont", target: "CatToCat/Mont" }
-          - { upstream: "OrekiYuta/Hstiro", target: "CatToCat/Hstiro"}
-          - { upstream: "OrekiYuta/Cink", target: "CatToCat/Cink" }
+          - { upstream: "OrekiYuta/orekiyuta.github.io", target: "CatToCat/orekiyuta.github.io", upstream_branch: "master", target_branch: "master" }
+          - { upstream: "OrekiYuta/Mont", target: "CatToCat/Mont", upstream_branch: "main", target_branch: "main" }
+          - { upstream: "OrekiYuta/Hstiro", target: "CatToCat/Hstiro", upstream_branch: "main", target_branch: "main" }
+          - { upstream: "OrekiYuta/Cink", target: "CatToCat/Cink", upstream_branch: "master", target_branch: "master" }
+
     steps:
       - name: Sync repo
         uses: CatToCat/github-forks-sync-action@master
@@ -25,7 +26,7 @@ jobs:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: ${{ matrix.repo.upstream }}
           target_repository: ${{ matrix.repo.target }}
-          upstream_branch: master
-          target_branch: master
+          upstream_branch: ${{ matrix.repo.upstream_branch }}
+          target_branch: ${{ matrix.repo.target_branch }}
           force: true
           tags: true
