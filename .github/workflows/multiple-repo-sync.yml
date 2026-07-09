@@ -14,6 +14,7 @@ jobs:
     strategy:
       matrix:
         repo:
+          - { upstream: "OrekiYuta/router-metrics-monitor", target: "CatToCat/router-metrics-monitor", upstream_branch: "main", target_branch: "main" }
           - { upstream: "OrekiYuta/open-notes", target: "CatToCat/open-notes", upstream_branch: "main", target_branch: "main" }
           - { upstream: "OrekiYuta/qr-code-decoder", target: "CatToCat/qr-code-decoder", upstream_branch: "main", target_branch: "main" }
           - { upstream: "OrekiYuta/neko-moji", target: "CatToCat/neko-moji", upstream_branch: "main", target_branch: "main" }
