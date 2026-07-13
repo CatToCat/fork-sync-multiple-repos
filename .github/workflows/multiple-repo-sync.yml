@@ -24,6 +24,7 @@ jobs:
           - { upstream: "OrekiYuta/Mont", target: "CatToCat/Mont", upstream_branch: "main", target_branch: "main" }
           - { upstream: "OrekiYuta/Hstiro", target: "CatToCat/Hstiro", upstream_branch: "main", target_branch: "main" }
           - { upstream: "OrekiYuta/orekiyuta.github.io", target: "CatToCat/orekiyuta.github.io", upstream_branch: "master", target_branch: "master" }
+          - { upstream: "OrekiYuta/v2sub-to-clash", target: "CatToCat/v2sub-to-clash", upstream_branch: "main", target_branch: "main" }
 
     steps:
       - name: Sync repo
