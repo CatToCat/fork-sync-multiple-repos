@@ -6,7 +6,10 @@ on:
     branches:
       - master
   schedule:
-    - cron: 0 */12 * * *
+    # Beijing time (UTC+8): 09:17 / 17:17 / 23:17, offset from the hour to reduce queue delay
+    - cron: "17 1 * * *"
+    - cron: "17 9 * * *"
+    - cron: "17 15 * * *"
 
 jobs:
   sync_repos:
